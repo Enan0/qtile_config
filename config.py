@@ -1,14 +1,10 @@
 
-import os, subprocess
 from libqtile import hook
-from libqtile.config import Key, Screen, Group, Drag, Click
-from libqtile.lazy import lazy
-from libqtile import layout, bar, widget
-from lib.keys.default import keys
+from settings.keys import MOD, keys
 
+from os import path
 terminal = guess_terminal()
 
-mod = "mod4"
 
 groups = [Group(i) for i in "123456"]
 
