@@ -1,5 +1,5 @@
 from libqtile.config  import Key
-from libqtile.command import lazy
+from libqtile.lazy import lazy
 
 MOD     = "mod4"
 ALT     = "ALT"
@@ -30,9 +30,12 @@ keys = [
         Key([MOD],"q", lazy.window.kill()),
 
         #restart shutdown
-        Key([MOD, CONTROL, ALT,SHIFT], "r", lazy.restart()),
-        Key([MOD, CONTROL, ALT,SHIFT], "q", lazy.shutdown()),
+        Key([MOD, CONTROL,SHIFT], "r", lazy.restart()),
+        Key([MOD, CONTROL,SHIFT], "q", lazy.shutdown()),
 
+        #change layout
+        Key([MOD], "Tab", lazy.next_layout()),
+        Key([MOD, SHIFT], "Tab", lazy.prev_layout()),
         #spawn windows
         Key([MOD],"Return", lazy.spawn("alacritty")),
 
