@@ -9,7 +9,6 @@ from lib.keys.default import keys
 terminal = guess_terminal()
 
 mod = "mod4"
-keys = keys
 
 groups = [Group(i) for i in "123456"]
 
