@@ -54,6 +54,6 @@ keys = [
         Key([MOD], "d", lazy.spawn("rofi -show drun -show-icons -disable-history")),
 
         #thunar
-        Key([MOD], "e",lazy.spawn("thunar"))
+        Key([MOD], "e",lazy.spawn("thunar")),
 
 ]

@@ -80,9 +80,10 @@ primary_widgets = [
 
         widget.Clock(**base(bg='color1'), format='%d/%m/%Y - %H:%M'),
 
-        powerline('dark','color1'),
 
         widget.Systray(background=colors['dark'], padding=5),
+        powerline('dark','color1'),
+        widget.Battery(background=colors['dark'],foreground=colors['light'], format='{percent:2.0%} {char}', full_char="", charge_char="", discharge_char="", low_foreground=colors['urgent'], low_percentage=5, padding=5)
 ]
 
 
